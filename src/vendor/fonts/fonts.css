@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'SourceSansPro';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("./SourceSansPro-Light.woff2?v=3.19") format("woff2"),
+    url("./SourceSansPro-Light.ttf?v=3.19") format("woff2"),
+    url("./SourceSansPro-Light.woff?v=3.19") format("woff");
+}
+
+@font-face {
+    font-family: 'SourceSansPro';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("./SourceSansPro-Regular.woff2?v=3.19") format("woff2"),
+    url("./SourceSansPro-Regular.ttf?v=3.19") format("ttf"),
+    url("./SourceSansPro-Regular.woff?v=3.19") format("woff");
+}
+
+@font-face {
+    font-family: 'SourceSansPro';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("./SourceSansPro-SemiBold.woff2?v=3.19") format("woff2"),
+    url("./SourceSansPro-SemiBold.ttf?v=3.19") format("ttf"),
+    url("./SourceSansPro-SemiBold.woff?v=3.19") format("woff");
+}
+
+@font-face {
+    font-family: 'SourceSansPro';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("./SourceSansPro-Bold.woff2?v=3.19") format("woff2"),
+    url("./SourceSansPro-Bold.ttf?v=3.19") format("ttf"),
+    url("./SourceSansPro-Bold.woff?v=3.19") format("woff");
+}
+
+@font-face {
+    font-family: 'SourceSansPro';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("./SourceSansPro-Black.woff2?v=3.19") format("woff2"),
+    url("./SourceSansPro-Black.ttf?v=3.19") format("ttf"),
+    url("./SourceSansPro-Black.woff?v=3.19") format("woff");
+}
