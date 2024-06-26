@@ -73,6 +73,17 @@ h6 {
   color: $colorWhite !important;
 }
 
+.p20b {
+  color: $colorGrey;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: $fontWeightRegular;
+}
+
+.p58 {
+  font-weight: $fontWeightBold;
+  @include font(42px, 58px, 52.79px, 72.91px);
+}
 
 .app {
   display: flex;
@@ -305,3 +316,32 @@ img {
 }
 
 /* /banner */
+
+
+/* trends */
+.trends {
+  &__container {
+    padding-top: 60px;
+    padding-bottom: 120px;
+    @include flexColumn;
+    @include gap(60px);
+  }
+  &__group {
+    @include flexRow;
+    justify-content: space-between;
+  }
+  &__list {
+    @include flexRow;
+    @include gap(30px);
+  }
+  &__line {
+    border:none;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.2) 48.42%, rgba(255, 255, 255, 0.04) 100%);
+  }
+  &__button {
+    margin: 0 auto;
+  }
+}
+/* /trends */
