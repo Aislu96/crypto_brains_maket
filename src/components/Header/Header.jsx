@@ -1,9 +1,50 @@
-
+import logo from '../../images/header/logo.svg';
+import arrow from '../../images/header/arrow.svg';
+import menu from '../../images/header/menu.svg';
 function Header() {
     return (
-        <div className="header">
-
-        </div>
+            <header className="header">
+                <div className="container header__container">
+                    <div className="header__inner">
+                        <a href="#" className="logo header__line">
+                            <img src={logo} alt="cripto brains" />
+                        </a>
+                        <nav className="menu">
+                            <ul className="menu__list">
+                                <li className="menu__item">
+                                    <p  className="menu__text p18">Market</p>
+                                    <img src={arrow} alt="icon arrow"/>
+                                </li>
+                                <li className="menu__item">
+                                    <p className="menu__text p18">Trade</p>
+                                    <img src={arrow} alt="icon arrow"/>
+                                </li>
+                                <li className="menu__item">
+                                    <p className="menu__text p18">Earn</p>
+                                    <img src={arrow} alt="icon arrow"/>
+                                </li>
+                                <li className="menu__item">
+                                    <p  className="menu__text p18">About</p>
+                                </li>
+                                <li className="menu__item">
+                                    <p className="menu__text p18">Career</p>
+                                </li>
+                            </ul>
+                        </nav>
+                        <ul className="user-actions">
+                            <li className="user-actions__item">
+                                <a href="#" className="button button__link">Log In</a>
+                            </li>
+                            <li className="user-actions__item">
+                                <a href="#" className="button button__link-two">Sign Up</a>
+                            </li>
+                            <li className="header__img">
+                                <img src={menu} alt="icon menu"/>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
     );
 }
 

@@ -1,8 +1,10 @@
 $primary-color: #1E1F25;
+$colorFon: #131517;
 $colorBlue: #1B70F1;
 $colorWhite: #FFFFFF;
 $colorWhiteTwo: #F7FAFF;
 $colorGrey: #ADB3BF;
+$colorGreyTwo: #808A9A;
 $colorGreen: #06B470;
 $fontWeightLight: 300;
 $fontWeightRegular: 400;
@@ -10,6 +12,7 @@ $fontWeightMedium: 500;
 $fontWeightSemiBold: 600;
 $fontWeightBold: 700;
 $wight: 1545px;
+
 
 @mixin flexColumn() {
   display: flex;
@@ -45,6 +48,10 @@ $wight: 1545px;
 }
 
 
+@mixin border($px, $color) {
+  border: $px solid $color;
+}
+
 h5 {
   @include font(20px, 24px, 30px, 36px);
   font-weight: $fontWeightSemiBold;
@@ -73,6 +80,12 @@ h6 {
   color: $colorWhite !important;
 }
 
+
+.p18 {
+  @include font(14px, 18px, 22px, 28px);
+  font-weight: $fontWeightRegular;
+}
+
 .p20b {
   color: $colorGrey;
   font-size: 20px;
@@ -91,7 +104,7 @@ h6 {
   max-width: 1920px;
   margin: 0 auto;
   min-width: 375px;
-  background-color: $primary-color;
+  background-color: $colorFon;
   color: $colorWhiteTwo;
   font-family: "SourceSansPro", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -126,11 +139,12 @@ h6 {
 
 /* /container */
 
-
+/* img */
 img {
-  width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
+
+/* /img */
 
 /* button */
 .button {
@@ -158,8 +172,25 @@ img {
     margin-top: 80px;
     margin-bottom: 175px;
   }
+
+  &__link {
+    background-color: transparent;
+  }
 }
 
+@media screen and (max-width: 1040px) {
+  .button {
+    &__link {
+      display: none;
+      &-two {
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        color: $colorGrey;
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 500px) {
   .button {
@@ -264,6 +295,10 @@ img {
 
   &__img {
     width: 100%;
+
+    img {
+      width: 100%;
+    }
   }
 }
 
@@ -326,22 +361,239 @@ img {
     @include flexColumn;
     @include gap(60px);
   }
+
   &__group {
     @include flexRow;
     justify-content: space-between;
   }
+
   &__list {
+    margin: 0;
+    align-items: center;
     @include flexRow;
     @include gap(30px);
   }
+
   &__line {
-    border:none;
+    border: none;
     height: 2px;
     width: 100%;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.2) 48.42%, rgba(255, 255, 255, 0.04) 100%);
   }
+
   &__button {
     margin: 0 auto;
   }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(200px, 240px));
+    @include gap(30px);
+  }
 }
+
+@media screen and (max-width: 1700px) {
+  .trends {
+    &__cards {
+      margin: 0 auto;
+      grid-template-columns: repeat(3, minmax(200px, 240px));
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .trends {
+    &__group {
+      align-items: center;
+      flex-direction: column;
+      @include gap(20px);
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .trends {
+    h2 {
+      text-align: center;
+    }
+
+    &__group {
+      align-items: normal;
+    }
+
+    &__button {
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .trends {
+    &__button {
+      margin: 0;
+    }
+
+    &__container {
+      padding-bottom: 60px;
+    }
+  }
+}
+
 /* /trends */
+
+.slick-arrow {
+  display: none !important;
+}
+
+
+/* card-trends */
+.card-trends {
+  border-radius: 10px;
+  @include border(2px, $primary-color);
+  @include flexColumn;
+  @include gap(20px);
+  align-items: center;
+  padding: 40px 30px;
+
+  &__img-one {
+    width: 48px;
+    height: 48px;
+  }
+
+  &__img-two {
+    width: 180px;
+    height: 100px;
+  }
+
+  &__item {
+    @include flexColumn;
+    @include gap(10px);
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .card-trends {
+    box-sizing: border-box;
+    width: 240px;
+  }
+}
+
+/* /card-trends */
+
+/* header */
+.header {
+  &__container {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: $primary-color;
+  }
+
+  &__inner {
+    align-items: center;
+    @include flexRow;
+    justify-content: space-between;
+  }
+
+  &__line {
+    padding-right: 40px;
+    border-right: 1px solid $colorGrey;
+  }
+
+  &__img {
+    display: none;
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .header {
+    &__img {
+      display: block;
+    }
+
+    &__line {
+      padding-right: 0;
+      border: none;
+    }
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .header {
+    &__img {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    &__container {
+      border-radius: 0 0 10px 10px;
+      border-bottom: 1px solid #FFFFFF1A;
+    }
+  }
+}
+
+/* /header */
+
+/* menu */
+.menu {
+  &__list {
+    @include flexRow;
+    @include gap(30px);
+  }
+
+  &__item {
+    @include flexRow;
+    gap: 12px;
+    padding: 18px 8px;
+  }
+
+  &__text {
+    color: $colorGreyTwo;
+  }
+}
+
+
+@media screen and (max-width: 1040px) {
+  .menu {
+    display: none;
+  }
+}
+
+/* /menu */
+
+/* user-actions */
+.user-actions {
+  @include flexRow;
+  @include gap(10px);
+  align-items: center;
+
+  &__item {
+    @include font(24px, 20px, 36px, 32px);
+    font-weight: $fontWeightRegular;
+
+    a {
+      padding: 12px 37px;
+    }
+  }
+}
+
+@media screen and (max-width: 1040px){
+  .user-actions {
+    @include gap(30px);
+    &__item {
+      a {
+        padding: 0;
+      }
+    }
+  }
+
+}
+
+/* /user-actions */
