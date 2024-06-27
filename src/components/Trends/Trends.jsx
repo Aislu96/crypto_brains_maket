@@ -5,6 +5,7 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {useResize} from "../../hooks/useResize";
+import "./Trends.scss";
 
 function Trends() {
     const {width, isScreenSm} = useResize();
@@ -26,7 +27,7 @@ function Trends() {
 
     return (
         <section className="trends">
-            <div className="container trends__container">
+            <div className="container container-flex">
                 <div className="trends__group">
                     <h2 className="p58">Market Trends</h2>
                     {isScreenSm &&
@@ -73,7 +74,7 @@ function Trends() {
                     </div>}
 
                 </div>
-                <div className="trends__line"></div>
+                <div className="line"></div>
                 {isScreenSm &&
                     <Slider {...settings}>
                         {cards.map((card, id) => {

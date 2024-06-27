@@ -1,0 +1,58 @@
+@import "../../scss/styles";
+/* header */
+.header {
+  &__container {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: $primary-color;
+  }
+
+  &__inner {
+    align-items: center;
+    @include flexRow;
+    justify-content: space-between;
+  }
+
+  &__line {
+    padding-right: 40px;
+    border-right: 1px solid $colorGrey;
+  }
+
+  &__img {
+    display: none;
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .header {
+    &__img {
+      display: block;
+    }
+
+    &__line {
+      padding-right: 0;
+      border: none;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header {
+    &__img {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    &__container {
+      border-radius: 0 0 10px 10px;
+      border-bottom: 1px solid $colorGreyThree;
+    }
+  }
+}
+
+/* /header */

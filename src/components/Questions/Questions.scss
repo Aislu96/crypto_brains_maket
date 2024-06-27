@@ -1,0 +1,97 @@
+@import '../../scss/styles';
+/* questions */
+.questions {
+
+
+  &__blocks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+
+  &__block {
+    @include gradient;
+    padding: 20px;
+    @include flexColumn;
+    @include gap(20px);
+    position: relative;
+  }
+
+
+  &__text {
+    color: $colorGrey;
+    margin-right: 44px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .questions {
+    &__blocks {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .questions {
+    &__blocks {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .questions {
+    &__blocks {
+      @include gap(20px);
+    }
+
+    &__text {
+      margin-right: 0;
+    }
+  }
+  .content {
+    text-align: center;
+    @include gap(20px);
+  }
+}
+
+.question-input {
+  display: none;
+}
+
+.question-label {
+  margin-right: 40px;
+}
+
+.question-img {
+  background-image: url("../../images/cross.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  width: 16px;
+  height: 16px;
+  transform: rotate(0deg);
+}
+
+.answer {
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.question-input:checked + .question-label + .answer {
+  height: auto;
+  padding: 10px 0;
+}
+
+.question-input:checked ~ .question-img {
+  transform: rotate(45deg);
+}
+
+/* /questions */

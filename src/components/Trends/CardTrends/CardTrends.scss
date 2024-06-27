@@ -1,0 +1,34 @@
+@import "../../../scss/styles";
+/* card-trends */
+.card-trends {
+  border-radius: 10px;
+  @include border(2px, $primary-color);
+  @include flexColumn;
+  @include gap(20px);
+  align-items: center;
+  padding: 40px 30px;
+
+  &__img-one {
+    width: 48px;
+    height: 48px;
+  }
+
+  &__img-two {
+    width: 180px;
+    height: 100px;
+  }
+
+  &__item {
+    @include flexColumn;
+    @include gap(10px);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .card-trends {
+    box-sizing: border-box;
+    width: 240px;
+  }
+}
+
+/* /card-trends */

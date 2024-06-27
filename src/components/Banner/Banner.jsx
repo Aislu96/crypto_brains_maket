@@ -1,6 +1,7 @@
 import laptop from '../../images/banner/laptop.png';
 import Button from "../Button/Button";
 import arrowUp from '../../images/arrowUp.svg';
+import './Banner.scss';
 
 
 function Banner() {
@@ -9,7 +10,7 @@ function Banner() {
             <div className="container banner__container">
                 <div className="banner__block">
                     <div className="banner__groups">
-                        <div className="banner__group">
+                        <div className="banner__group group">
                             <div className="banner__line-one"/>
                             <h5>Crypto Brains</h5>
                         </div>
@@ -33,7 +34,7 @@ function Banner() {
                     <div className="banner__crisper">
                         <div className="banner__list">
                             <span className="p16">BTC/INR</span>
-                            <div className="banner__item">
+                            <div className="group">
                                 <img src={arrowUp} alt="icon arrow" />
                                 <span className="p14">5.76%</span>
                             </div>
@@ -43,7 +44,7 @@ function Banner() {
                     <div className="banner__crisper">
                         <div className="banner__list">
                             <span className="p16">BTC/INR</span>
-                            <div className="banner__item">
+                            <div className="group">
                                 <img src={arrowUp} alt="icon arrow" />
                                 <span className="p14">5.76%</span>
                             </div>
@@ -53,7 +54,7 @@ function Banner() {
                     <div className="banner__crisper">
                         <div className="banner__list">
                             <span className="p16">BTC/INR</span>
-                            <div className="banner__item">
+                            <div className="group">
                                 <img src={arrowUp} alt="icon arrow" />
                                 <span className="p14">5.76%</span>
                             </div>
@@ -63,7 +64,7 @@ function Banner() {
                     <div className="banner__crisper">
                         <div className="banner__list">
                             <span className="p16">BTC/INR</span>
-                            <div className="banner__item">
+                            <div className="group">
                                 <img src={arrowUp} alt="icon arrow" />
                                 <span className="p14">5.76%</span>
                             </div>
@@ -73,7 +74,7 @@ function Banner() {
                     <div className="banner__crisper">
                         <div className="banner__list">
                             <span className="p16">BTC/INR</span>
-                            <div className="banner__item">
+                            <div className="group">
                                 <img src={arrowUp} alt="icon arrow" />
                                 <span className="p14">5.76%</span>
                             </div>
@@ -83,7 +84,7 @@ function Banner() {
                     <div className="banner__crisper">
                         <div className="banner__list">
                             <span className="p16">BTC/INR</span>
-                            <div className="banner__item">
+                            <div className="group">
                                 <img src={arrowUp} alt="icon arrow" />
                                 <span className="p14">5.76%</span>
                             </div>
@@ -93,7 +94,7 @@ function Banner() {
                     <div className="banner__crisper">
                         <div className="banner__list">
                             <span className="p16">BTC/INR</span>
-                            <div className="banner__item">
+                            <div className="group">
                                 <img src={arrowUp} alt="icon arrow" />
                                 <span className="p14">5.76%</span>
                             </div>

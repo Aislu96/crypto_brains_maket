@@ -1,0 +1,154 @@
+@import "../../scss/styles";
+/* trade */
+.trade {
+  overflow: hidden;
+
+  &__container {
+    padding-top: 54px;
+    padding-bottom: 54px;
+    @include flexRow;
+    @include gap(61px);
+
+  }
+
+  &__block {
+    width: 50%;
+    margin: auto;
+  }
+
+  p {
+    margin-top: 30px;
+    margin-bottom: 80px;
+  }
+
+  &__groups {
+    @include flexRow;
+    @include gap(30px);
+  }
+
+  &__group {
+    @include flexCenter;
+    gap: 10px;
+    position: relative;
+    padding: 12px 32px;
+    @include gradient;
+
+    svg {
+      fill: $colorWhite;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__img {
+    margin: auto;
+    height: 531px;
+    @include flexRow;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1400px) {
+  .trade {
+    &__img {
+      height: 450px;
+
+      img:first-child {
+        height: 90%;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .trade {
+    &__img {
+      height: 350px;
+
+      img:first-child {
+        height: 90%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .trade {
+    &__container {
+      flex-direction: column;
+    }
+
+    &__block {
+      text-align: center;
+      width: 100%;
+    }
+
+    p {
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    &__groups {
+      flex-direction: column;
+      @include gap(20px);
+    }
+
+    &__group {
+      margin: 0 auto;
+      border: 0;
+      background: $colorWhite;
+      outline: 0;
+      outline-offset: 0;
+
+      span {
+        color: $primary-color;
+      }
+
+      &:nth-child(3) {
+        display: none;
+      }
+
+      svg {
+        fill: $primary-color;
+      }
+    }
+
+    &__img {
+      margin: 0 auto;
+      height: 250px;
+
+      img {
+        height: 100%;
+
+        &:first-child {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 676px) {
+  .trade {
+    &__img {
+      height: 164px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .trade {
+    &__group {
+      margin: 0;
+    }
+  }
+}
+
+/* /trade */

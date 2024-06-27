@@ -1,0 +1,135 @@
+@import '../../scss/styles';
+/* banner */
+.banner {
+  &__container {
+    padding-top: 161px;
+    padding-bottom: 30px;
+    @include flexColumn;
+  }
+
+  &__block {
+    @include flexRow;
+  }
+
+  &__group {
+    color: $colorBlue;
+  }
+
+  &__line-one {
+    height: 2px;
+    background-color: $colorBlue;
+    transform: rotate(180deg);
+    width: 40px;
+  }
+
+  &__title {
+    @include font(38px, 96px, 47.77px, 120.67px);
+    font-weight: $fontWeightBold;
+    @include letterSpacing(-1.5px);
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  h6 {
+    color: $colorGrey;
+  }
+
+  &__line-two {
+    margin-left: 20%;
+    width: 60%;
+    height: 2px;
+    border: none;
+    margin-bottom: 20px;
+    background-image: linear-gradient(90deg, transparent, transparent 50%, $primary-color 50%, $primary-color 100%), linear-gradient(90deg, rgba(154, 195, 33, 0.1) 0%, rgba(154, 195, 33, 0.8) 48.42%, rgba(154, 195, 33, 0.1) 100%);
+    background-size: 20px 3px, 100% 3px;
+  }
+
+  &__list {
+    @include flexRow;
+    @include gap(15px);
+  }
+
+  &__crisper {
+    position: relative;
+    @include flexColumn;
+    @include gap(20px);
+    padding: 10px 40px 10px 20px;
+
+    &:not(:last-child) {
+      &::before {
+        content: '';
+        position: absolute;
+        top: 36px;
+        right: 0;
+        height: 40px;
+        width: 1px;
+        background-color: $colorWhite;
+      }
+    }
+  }
+
+
+  &__crispers {
+    @include flexRow;
+    flex-wrap: wrap;
+    @include gap(20px);
+  }
+
+  &__img {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1280px) {
+  .banner {
+    &__block {
+      flex-direction: column-reverse;
+    }
+
+    img {
+      text-align: center;
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .banner {
+    &__container {
+      padding-top: 20px;
+      padding-bottom: 0;
+    }
+
+
+    &__groups {
+      @include flexColumn;
+      align-items: center;
+    }
+
+    &__title {
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    h6 {
+      text-align: center;
+    }
+
+    &__line-two {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    &__crispers {
+      display: none;
+    }
+
+  }
+}
+
+/* /banner */

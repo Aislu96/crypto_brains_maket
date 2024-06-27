@@ -1,3 +1,5 @@
+import './CardTrends.scss';
+
 function CardTrends({card}) {
     return (
         <div className="card-trends">

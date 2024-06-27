@@ -1,0 +1,125 @@
+$primary-color: #1E1F25;
+$colorFon: #131517;
+$colorBlue: #1B70F1;
+$colorWhite: #FFFFFF;
+$colorWhiteTwo: #F7FAFF;
+$colorGrey: #ADB3BF;
+$colorGreyTwo: #808A9A;
+$colorGreyThree: #FFFFFF1A;
+$colorGreen: #06B470;
+$fontWeightLight: 300;
+$fontWeightRegular: 400;
+$fontWeightMedium: 500;
+$fontWeightSemiBold: 600;
+$fontWeightBold: 700;
+$wight: 1545px;
+
+@mixin flexColumn() {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flexCenter() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flexRow() {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin gap($gap) {
+    gap: $gap;
+}
+
+@mixin border($height, $color) {
+    border: $height solid $color;
+}
+
+@mixin font($minFont, $maxFont, $minHeight, $maxHeight) {
+    font-size: calc($minFont + (($maxFont - $minFont) / $wight) * (100vw - 375px));
+    line-height: clamp($minHeight, calc(1.5em + 0.3 * (100vw - 375px) / 1545), $maxHeight);
+}
+
+@mixin letterSpacing($px) {
+    letter-spacing: $px;
+}
+
+
+@mixin border($px, $color) {
+    border: $px solid $color;
+}
+
+@mixin gradient {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: 1px solid transparent;
+    outline-offset: -1px;
+    background: linear-gradient(to right, #131517, #131517) padding-box,
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.4) 48.42%, rgba(255, 255, 255, 0.1) 100%) border-box;
+}
+
+h5 {
+    @include font(20px, 24px, 30px, 36px);
+    font-weight: $fontWeightSemiBold;
+}
+
+.h36 {
+    @include font(18px, 24px, 28px, 36px);
+    font-weight: $fontWeightSemiBold;
+}
+
+h6 {
+    @include font(18px, 20px, 28px, 32px);
+    font-weight: $fontWeightRegular;
+}
+
+.p14 {
+    font-weight: $fontWeightRegular;
+    @include font(16px, 14px, 24px, 20px);
+    color: $colorGreen;
+}
+
+.p16 {
+    font-weight: $fontWeightRegular;
+    @include font(20px, 16px, 32px, 24px);
+    color: $colorGrey;
+}
+
+.p20 {
+    font-weight: $fontWeightSemiBold;
+    @include font(24px, 20px, 36px, 32px);
+    color: $colorWhite !important;
+}
+
+
+.p18 {
+    @include font(14px, 18px, 22px, 28px);
+    font-weight: $fontWeightRegular;
+}
+
+.p18b {
+    color: $colorGrey;
+    @include font(16px, 18px, 26px, 28px);
+    font-weight: $fontWeightRegular;
+}
+
+.p18c {
+    font-size: 18px;
+    font-weight: $fontWeightRegular;
+    line-height: 28px;
+}
+
+.p20b {
+    color: $colorGrey;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: $fontWeightRegular;
+}
+
+.p58 {
+    font-weight: $fontWeightBold;
+    @include font(42px, 58px, 52.79px, 72.91px);
+}
