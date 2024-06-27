@@ -23,6 +23,10 @@
   height: 2px;
   width: 100%;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.2) 48.42%, rgba(255, 255, 255, 0.04) 100%);
+
+  &__two {
+    background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.02) 100%);
+  }
 }
 
 .group {
@@ -92,26 +96,32 @@ img {
   border-radius: 4px;
   border: 0;
 
-  &__style {
+  &_style {
     @include border(1px, $colorWhite);
     background-color: transparent;
   }
 
-  &__group {
+  &_group {
     @include flexRow;
     @include gap(30px);
     margin-top: 80px;
     margin-bottom: 175px;
   }
 
-  &__link {
+  &_link {
     background-color: transparent;
+  }
+
+  &_choose {
+    padding: 20px 10px;
+    background-color: transparent;
+    border: 0;
   }
 }
 
 @media screen and (max-width: 1040px) {
   .button {
-    &__link {
+    &_link {
       display: none;
 
       &-two {
@@ -121,6 +131,11 @@ img {
         color: $colorGrey;
       }
     }
+    &_choose {
+      padding: 12px 45px;
+      background-color: $colorBlue;
+      border-radius: 4px;
+    }
   }
 }
 
@@ -128,7 +143,7 @@ img {
   .button {
     width: 100%;
 
-    &__group {
+    &_group {
       margin-top: 20px;
       margin-bottom: 0;
       @include flexColumn;
@@ -192,3 +207,79 @@ img {
 }
 
 /* /user-actions */
+
+
+.choose {
+  h2 {
+    color: $colorBlackTwo;
+  }
+
+  &__blocks {
+    @include flexRow;
+    @include gap(135px);
+  }
+
+  &__block {
+    @include flexColumn;
+    @include gap(40px);
+  }
+
+  &__groups {
+    @include flexRow;
+    @include gap(20px);
+  }
+
+  &__group {
+    @include flexColumn;
+    gap: 12px;
+  }
+
+  &__img {
+    width: auto;
+    margin: auto;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .choose {
+    &__blocks {
+      @include gap(50px);
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .choose {
+    &__blocks {
+      flex-direction: column-reverse;
+      @include gap(40px);
+    }
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .choose {
+    h2 {
+      color: $colorGreyTwo;
+    }
+    &__groups {
+      @include flexColumn;
+      align-items: center;
+    }
+    &__group {
+      align-items: center;
+      p {
+        text-align: center;
+      }
+    }
+  }
+  .line__two {
+    display: none;
+  }
+}

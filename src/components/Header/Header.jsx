@@ -35,10 +35,10 @@ function Header() {
                     </nav>
                     <ul className="user-actions group">
                         <li className="user-actions__item">
-                            <a href="#" className="button button__link">Log In</a>
+                            <a href="#" className="button button_link">Log In</a>
                         </li>
                         <li className="user-actions__item">
-                            <a href="#" className="button button__link-two">Sign Up</a>
+                            <a href="#" className="button button_link-two">Sign Up</a>
                         </li>
                         <li className="header__img">
                             <img src={menu} alt="icon menu"/>

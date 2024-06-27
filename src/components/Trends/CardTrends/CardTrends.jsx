@@ -9,7 +9,7 @@ function CardTrends({card}) {
                 <img src={card.srcArrow} alt="icon arrow" />
                 <span className="p14">{card.interest}</span>
             </div>
-            <h6 className="p20">{card.value}</h6>
+            <span className="p20">{card.value}</span>
             <img className="card-trends__img-two" src={card.srcSchedule} alt="schedule"/>
         </div>
     );

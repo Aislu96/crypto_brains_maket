@@ -1,5 +1,6 @@
 $primary-color: #1E1F25;
 $colorFon: #131517;
+$colorBlackTwo: #272A34;
 $colorBlue: #1B70F1;
 $colorWhite: #FFFFFF;
 $colorWhiteTwo: #F7FAFF;
@@ -61,17 +62,17 @@ $wight: 1545px;
     linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.4) 48.42%, rgba(255, 255, 255, 0.1) 100%) border-box;
 }
 
-h5 {
+.h24 {
     @include font(20px, 24px, 30px, 36px);
     font-weight: $fontWeightSemiBold;
 }
 
-.h36 {
+.h24b {
     @include font(18px, 24px, 28px, 36px);
     font-weight: $fontWeightSemiBold;
 }
 
-h6 {
+.h20 {
     @include font(18px, 20px, 28px, 32px);
     font-weight: $fontWeightRegular;
 }
@@ -85,6 +86,12 @@ h6 {
 .p16 {
     font-weight: $fontWeightRegular;
     @include font(20px, 16px, 32px, 24px);
+    color: $colorGrey;
+}
+
+.p16b {
+    font-weight: $fontWeightRegular;
+    @include font(14px, 16px, 22px, 24px);
     color: $colorGrey;
 }
 
@@ -122,4 +129,10 @@ h6 {
 .p58 {
     font-weight: $fontWeightBold;
     @include font(42px, 58px, 52.79px, 72.91px);
+}
+
+.p58f {
+    font-weight: $fontWeightRegular;
+    font-size: 58px;
+    line-height: 72.91px;
 }
