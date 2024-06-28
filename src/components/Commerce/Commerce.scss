@@ -15,6 +15,12 @@
     @include gap(40px);
     background-color: $colorBlackTwo;
     border-radius: 10px;
+    &:hover {
+      &:hover {
+        box-shadow: 1px 2px 10px -1px #817496;
+        cursor: pointer;
+      }
+    }
   }
 
   img {
@@ -47,6 +53,13 @@
     &__block {
       display: grid;
       grid-template-columns: repeat(1, minmax(300px, 375px));
+    }
+    &__groups {
+      padding: 20px;
+    }
+    img {
+      width: 58px;
+      height: 58px;
     }
   }
 }

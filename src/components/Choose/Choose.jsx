@@ -8,7 +8,7 @@ import './Choose.scss';
 
 
 function Choose() {
-    const {width, isScreenMd} = useResize();
+    const {width, isScreenMdx} = useResize();
     const settings = {
         dots: true,
         infinite: false,
@@ -26,7 +26,7 @@ function Choose() {
                 </div>
                 <div className="line"></div>
                 <div className="choose__blocks">
-                    {isScreenMd &&
+                    {isScreenMdx &&
                         <Slider {...settings}>
                                 <div className="choose__groups">
                                     <h2 className='p58f'>01</h2>
@@ -66,7 +66,7 @@ function Choose() {
                                 </div>
                         </Slider>
                     }
-                    {!isScreenMd &&
+                    {!isScreenMdx &&
                         <div className="choose__block">
                             <div className="choose__groups">
                                 <h2 className='p58f'>01</h2>

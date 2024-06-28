@@ -1,5 +1,4 @@
 import logo from '../../images/header/logo.svg';
-import arrow from '../../images/header/arrow.svg';
 import menu from '../../images/header/menu.svg';
 import './Header.scss';
 
@@ -15,15 +14,15 @@ function Header() {
                         <ul className="menu__list">
                             <li className="menu__item">
                                 <p className="menu__text p18">Market</p>
-                                <img src={arrow} alt="icon arrow"/>
+                                <div className="menu__arrow"></div>
                             </li>
                             <li className="menu__item">
                                 <p className="menu__text p18">Trade</p>
-                                <img src={arrow} alt="icon arrow"/>
+                                <div className="menu__arrow"></div>
                             </li>
                             <li className="menu__item">
                                 <p className="menu__text p18">Earn</p>
-                                <img src={arrow} alt="icon arrow"/>
+                                <div className="menu__arrow"></div>
                             </li>
                             <li className="menu__item">
                                 <p className="menu__text p18">About</p>

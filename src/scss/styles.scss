@@ -27,6 +27,16 @@
   &__two {
     background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.02) 100%);
   }
+
+  &__active {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .line__active {
+    display: block;
+  }
 }
 
 .group {
@@ -44,6 +54,24 @@
   align-items: center;
   @include flexColumn;
   @include gap(30px);
+
+  &__about-us {
+    @include flexRow;
+    justify-content: space-between;
+    @include gap(30px);
+  }
+  p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .content {
+    &__about-us {
+      @include flexColumn;
+      justify-content: space-between;
+    }
+  }
 }
 
 
@@ -85,18 +113,31 @@ img {
   object-fit: contain;
 }
 
+.logo {
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+
 /* /img */
 
 /* button */
 .button {
   @include flexRow;
   justify-content: center;
+  align-items: center;
   @include gap(8px);
   padding: 12px 45px;
   background-color: $colorBlue;
   color: $colorWhite;
   border-radius: 4px;
   border: 0;
+  &:hover {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid $colorBlue;
+  }
 
   &_style {
     @include border(1px, $colorWhite);
@@ -112,6 +153,16 @@ img {
 
   &_link {
     background-color: transparent;
+
+    &:hover {
+      cursor: pointer;
+      border: 1px solid $colorBlue;
+    }
+    &-two:hover {
+      cursor: pointer;
+      border: none;
+      color: $colorWhite;
+    }
   }
 
   &_choose {
@@ -134,7 +185,6 @@ img {
       display: none;
 
       &-two {
-        padding: 0;
         background-color: transparent;
         border: none;
         color: $colorGrey;
@@ -156,9 +206,10 @@ img {
       width: 100%;
     }
 
-    &_choose {
+    &_choose, &_commerce {
       padding: 12px 45px;
       background-color: $colorBlue;
+      color: $colorWhite;
       border-radius: 4px;
     }
   }
@@ -177,6 +228,31 @@ img {
     @include flexRow;
     gap: 12px;
     padding: 18px 8px;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+
+      p {
+        color: $colorWhite;
+      }
+
+      .menu__arrow {
+        background-image: url("../images/header/arrowTwo.svg");
+      }
+    }
+    &-two:hover {
+      cursor: pointer;
+      border: 1px solid $colorBlue !important;
+    }
+  }
+
+  &__arrow {
+    width: 9px;
+    height: 4px;
+    background-image: url("../images/header/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   &__text {
@@ -189,6 +265,13 @@ img {
   .menu {
     display: none;
   }
+}
+
+@media screen and (max-width: 600px) {
+  .menu__list_footer {
+    display: none;
+  }
+
 }
 
 /* /menu */
@@ -230,10 +313,11 @@ img {
 }
 
 .slick-dots li button {
-  width: 40px;
+  width: 35px;
   height: 4px;
   opacity: .2;
   padding: 0;
+  background-color: $colorWhite;
 }
 
 .slick-dots li button:before {

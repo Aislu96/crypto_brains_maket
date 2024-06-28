@@ -2,8 +2,8 @@
 /* header */
 .header {
   &__container {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
   }
 
   &__inner {
@@ -21,6 +21,10 @@
     display: none;
     width: 28px;
     height: 28px;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
   }
 }
 
@@ -48,6 +52,8 @@
 @media screen and (max-width: 500px) {
   .header {
     &__container {
+      padding-top: 30px !important;
+      padding-bottom: 20px !important;
       border-radius: 0 0 10px 10px;
       border-bottom: 1px solid $colorGreyThree;
     }

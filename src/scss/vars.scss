@@ -4,9 +4,11 @@ $colorBlackTwo: #272A34;
 $colorBlue: #1B70F1;
 $colorWhite: #FFFFFF;
 $colorWhiteTwo: #F7FAFF;
+$colorWhiteThree: #FDFDFD;
 $colorGrey: #ADB3BF;
 $colorGreyTwo: #808A9A;
 $colorGreyFour: #CFD3DA;
+$colorGreyFive: #BFC4CD;
 $colorGreyThree: #FFFFFF1A;
 $colorGreen: #06B470;
 $fontWeightLight: 300;
@@ -84,6 +86,13 @@ $wight: 1545px;
     color: $colorGreen;
 }
 
+.p14b {
+    font-weight: $fontWeightRegular;
+    font-size: 14px;
+    line-height: 20px;
+    color: $colorGreyFive;
+}
+
 .p16 {
     font-weight: $fontWeightRegular;
     @include font(20px, 16px, 32px, 24px);
@@ -94,6 +103,13 @@ $wight: 1545px;
     font-weight: $fontWeightRegular;
     @include font(14px, 16px, 22px, 24px);
     color: $colorGrey;
+}
+
+.p16c {
+    font-weight: $fontWeightRegular;
+    font-size: 16px;
+    line-height: 20px;
+    color: $colorGreyFive;
 }
 
 .p20 {

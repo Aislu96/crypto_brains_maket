@@ -23,6 +23,10 @@
     grid-template-columns: repeat(6, minmax(200px, 240px));
     @include gap(30px);
   }
+  &__link:hover {
+    cursor: pointer;
+    color: $colorWhite;
+  }
 }
 
 @media screen and (max-width: 1700px) {

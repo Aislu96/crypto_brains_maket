@@ -1,0 +1,71 @@
+@import "../../scss/styles";
+
+.about-us {
+  h2 {
+    color: $colorWhite;
+  }
+
+  img {
+    width: 72px;
+    height: 72px;
+  }
+
+  p {
+    font-weight: $fontWeightRegular;
+  }
+
+  &__block {
+    padding: 40px 30px;
+    display: flex !important;
+    flex-direction: column;
+    @include gap(30px);
+    background-color: $colorBlackTwo;
+    border-radius: 10px;
+    width: auto !important;
+    margin-right: 20px;
+  }
+
+  &__groups {
+    @include flexRow;
+    @include gap(20px);
+  }
+
+  &__group {
+    align-items: center;
+    @include flexColumn;
+    @include gap(2px);
+    margin: auto 0;
+  }
+
+  &__img {
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .about-us {
+    p {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .about-us {
+    &__block {
+      padding: 20px;
+      @include gap(40px);
+    }
+    &__groups {
+      @include gap(10px);
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-us {
+    &__block {
+      margin-right: 0;
+    }
+  }
+}

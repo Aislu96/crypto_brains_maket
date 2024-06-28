@@ -1,0 +1,202 @@
+@import "../../scss/styles";
+/* footer */
+.footer {
+  &__container {
+    padding-bottom: 30px;
+  }
+
+  &__list {
+    svg {
+      width: 28px;
+      height: 28px;
+      fill: $colorWhite;
+      &:hover {
+        cursor: pointer;
+        fill: $colorBlue;
+      }
+    }
+  }
+
+  &__community {
+    @include flexRow;
+    @include gap(30px);
+
+    &_active {
+      display: none;
+    }
+  }
+
+  &__list {
+    @include flexRow;
+    @include gap(30px);
+  }
+
+  &__group {
+    align-items: center;
+    @include flexRow;
+    justify-content: space-between;
+
+    span {
+      margin: auto 0;
+      display: inline-block;
+    }
+
+    p, span, li {
+      color: $colorWhiteThree;
+    }
+
+    &-two {
+      @include flexRow;
+      @include gap(20px);
+
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+        display: flex;
+        gap: 20px;
+
+        li {
+          display: flex;
+          align-items: center;
+
+          &:before {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: $colorWhite;
+            opacity: .4;
+            border-radius: 50%;
+            margin-right: 20px;
+          }
+        }
+      }
+
+    }
+  }
+
+  &__inner {
+    @include flexRow;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  &__blocks {
+    @include flexRow;
+    @include gap(30px);
+    justify-content: space-between;
+  }
+
+  &__block {
+    @include flexColumn;
+    @include gap(20px);
+    & p:hover {
+        cursor: pointer;
+        opacity: 0.5;
+    }
+    &-item:hover {
+      cursor: pointer;
+      color: $colorWhite;
+    }
+
+    &-list {
+      @include flexColumn;
+      @include gap(20px);
+
+      span {
+        font-size: 14px;
+        line-height: 20px;
+        color: $colorBlue;
+        padding: 4px 8px;
+        background-color: rgba(27, 112, 241, 0.1);
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .menu__item-two {
+    border-radius: 4px;
+    border: 1px solid #FFFFFF33;
+    @include flexRow;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 14px;
+
+    img {
+      width: 12px;
+      height: 6px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 950px) {
+  .footer {
+    &__blocks {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(206px, 240px));
+      @include gap(20px);
+    }
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    &__container {
+      padding-bottom: 20px;
+      gap: 20px;
+    }
+
+    &__blocks {
+      grid-template-columns: repeat(2, minmax(165px, 240px));
+      gap: 20px 13px;
+    }
+
+    &__community {
+      display: none;
+
+      &_active {
+        align-items: center;
+        @include flexColumn;
+        @include gap(20px);
+      }
+    }
+
+    &__inner {
+      margin: 0 auto;
+    }
+
+    &__list {
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    &__group {
+      margin: 0 auto;
+
+      &-two {
+        flex-direction: column-reverse;
+        @include gap(20px);
+        align-items: center;
+
+        ul {
+          li {
+            &:nth-child(1):before {
+              display: none;
+            }
+          }
+        }
+
+        span {
+          color: $colorGreyTwo;
+        }
+
+      }
+    }
+  }
+}
+/* /footer */
