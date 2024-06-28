@@ -46,21 +46,19 @@
   @include gap(30px);
 }
 
-.container-flex {
-  @include flexColumn;
-  @include gap(60px);
-}
-
-@media screen and (max-width: 700px) {
-  .container-flex {
-    @include gap(40px);
-  }
-}
-
 
 /* container */
 .container {
   padding: 120px 8.6%;
+
+  &-color {
+    background-color: $primary-color;
+  }
+
+  &-flex {
+    @include flexColumn;
+    @include gap(60px);
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -73,6 +71,10 @@
 @media screen and (max-width: 700px) {
   .container {
     padding: 60px 16px;
+
+    &-flex {
+      @include gap(40px);
+    }
   }
 }
 
@@ -117,6 +119,13 @@ img {
     background-color: transparent;
     border: 0;
   }
+
+  &_commerce {
+    padding: 24px 12px;
+    background-color: transparent;
+    border: 0;
+    color: $colorGrey;
+  }
 }
 
 @media screen and (max-width: 1040px) {
@@ -131,23 +140,26 @@ img {
         color: $colorGrey;
       }
     }
-    &_choose {
-      padding: 12px 45px;
-      background-color: $colorBlue;
-      border-radius: 4px;
-    }
   }
 }
 
 @media screen and (max-width: 500px) {
   .button {
     width: 100%;
+    height: 48px;
+    align-items: center;
 
     &_group {
       margin-top: 20px;
       margin-bottom: 0;
       @include flexColumn;
       width: 100%;
+    }
+
+    &_choose {
+      padding: 12px 45px;
+      background-color: $colorBlue;
+      border-radius: 4px;
     }
   }
 }
@@ -209,77 +221,31 @@ img {
 /* /user-actions */
 
 
-.choose {
-  h2 {
-    color: $colorBlackTwo;
-  }
-
-  &__blocks {
-    @include flexRow;
-    @include gap(135px);
-  }
-
-  &__block {
-    @include flexColumn;
-    @include gap(40px);
-  }
-
-  &__groups {
-    @include flexRow;
-    @include gap(20px);
-  }
-
-  &__group {
-    @include flexColumn;
-    gap: 12px;
-  }
-
-  &__img {
-    width: auto;
-    margin: auto;
-
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-  }
+.slick-dots li {
+  height: 4px;
+  width: 40px;
+  background-color: #1E1F25;
+  margin-right: 10px;
+  margin-left: 0;
 }
 
-@media screen and (max-width: 1200px) {
-  .choose {
-    &__blocks {
-      @include gap(50px);
-    }
-  }
+.slick-dots li button {
+  width: 40px;
+  height: 4px;
+  opacity: .2;
+  padding: 0;
 }
 
-@media screen and (max-width: 1000px) {
-  .choose {
-    &__blocks {
-      flex-direction: column-reverse;
-      @include gap(40px);
-    }
-  }
+.slick-dots li button:before {
+  width: 40px;
+  height: 4px;
 }
 
+.slick-dots li.slick-active {
+  background-color: $colorGreyFour;
 
-@media screen and (max-width: 700px) {
-  .choose {
-    h2 {
-      color: $colorGreyTwo;
-    }
-    &__groups {
-      @include flexColumn;
-      align-items: center;
-    }
-    &__group {
-      align-items: center;
-      p {
-        text-align: center;
-      }
-    }
-  }
-  .line__two {
-    display: none;
-  }
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
 }

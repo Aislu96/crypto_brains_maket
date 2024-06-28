@@ -16,6 +16,7 @@ const cards = [
         srcArrow: srcArrowUp,
         interest: "5.76%",
         value: '₹ 28,214,25.341',
+        colorText: '#06B470',
         srcSchedule: srcScheduleGreen,
     },
     {
@@ -24,6 +25,7 @@ const cards = [
         srcArrow: srcArrowDown,
         interest: "5.76%",
         value: '₹ 28,214,25.341',
+        colorText: '#F74E2C',
         srcSchedule: srcScheduleRed,
     },
     {
@@ -32,6 +34,7 @@ const cards = [
         srcArrow: srcArrowUp,
         interest: "5.76%",
         value: '₹ 28,214,25.341',
+        colorText: '#06B470',
         srcSchedule: srcScheduleGreen,
     },
     {
@@ -40,6 +43,7 @@ const cards = [
         srcArrow: srcArrowDown,
         interest: "5.76%",
         value: '₹ 28,214,25.341',
+        colorText: '#F74E2C',
         srcSchedule: srcScheduleRed,
     },
     {
@@ -48,6 +52,7 @@ const cards = [
         srcArrow: srcArrowDown,
         interest: "5.76%",
         value: '₹ 28,214,25.341',
+        colorText: '#F74E2C',
         srcSchedule: srcScheduleRed,
     },
     {
@@ -56,6 +61,7 @@ const cards = [
         srcArrow: srcArrowUp,
         interest: "5.76%",
         value: '₹ 28,214,25.341',
+        colorText: '#06B470',
         srcSchedule: srcScheduleGreen,
     },
 ];

@@ -6,7 +6,7 @@ import './Header.scss';
 function Header() {
     return (
         <header className="header">
-            <div className="container header__container">
+            <div className="container header__container container-color">
                 <div className="header__inner">
                     <a href="#" className="logo header__line">
                         <img src={logo} alt="cripto brains"/>

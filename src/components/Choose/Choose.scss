@@ -1,0 +1,79 @@
+@import "../../scss/styles";
+/* choose */
+.choose {
+  h2 {
+    color: $colorBlackTwo;
+  }
+
+  &__blocks {
+    @include flexRow;
+    @include gap(135px);
+  }
+
+  &__block {
+    @include flexColumn;
+    @include gap(40px);
+  }
+
+  &__groups {
+    @include flexRow;
+    @include gap(20px);
+  }
+
+  &__group {
+    @include flexColumn;
+    gap: 12px;
+  }
+
+  &__img {
+    width: auto;
+    margin: auto;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+}
+
+@media screen and (max-width: 1200px) {
+  .choose {
+    &__blocks {
+      @include gap(50px);
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .choose {
+    &__blocks {
+      flex-direction: column-reverse;
+      @include gap(40px);
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .choose {
+    h2 {
+      color: $colorGreyTwo;
+    }
+    &__groups {
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__group {
+      align-items: center;
+      p {
+        text-align: center;
+      }
+    }
+  }
+  .line__two {
+    display: none !important;
+  }
+}
+
+/* /choose */

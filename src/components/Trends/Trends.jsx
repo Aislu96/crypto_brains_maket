@@ -8,20 +8,36 @@ import {useResize} from "../../hooks/useResize";
 import "./Trends.scss";
 
 function Trends() {
-    const {width, isScreenSm} = useResize();
+    const {width, isScreenMd} = useResize();
     const settings = {
         dots: false,
         infinite: false,
         speed: 500,
-        slidesToShow: 1.5,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        initialSlide: 0,
+        responsive: [
+            {
+                breakpoint: 750,  // Если ширина экрана >= 750px
+                settings: {
+                    slidesToShow: 2.3,
+                }
+            },
+            {
+                breakpoint: 500,  // Если ширина экрана >= 500px
+                settings: {
+                    slidesToShow: 1.5,
+                }
+            }
+        ]
     };
     const settingsTwo = {
         dots: false,
-        infinite: false,
+        infinite: true,
         speed: 500,
         slidesToShow: 3,
-        slidesToScroll: 1
+        slidesToScroll: 3,
+        variableWidth: true,
+        initialSlide: 0
     };
 
 
@@ -30,7 +46,7 @@ function Trends() {
             <div className="container container-flex">
                 <div className="trends__group">
                     <h2 className="p58">Market Trends</h2>
-                    {isScreenSm &&
+                    {isScreenMd &&
                         <Slider {...settingsTwo}>
                             <div className="trends__item">
                                 <a href="#" className="trends__link p20b">All</a>
@@ -52,7 +68,7 @@ function Trends() {
                             </div>
                         </Slider>
                     }
-                    {!isScreenSm &&  <div className="trends__list">
+                    {!isScreenMd &&  <div className="trends__list">
                         <div className="trends__item">
                             <a href="#" className="trends__link p20b">All</a>
                         </div>
@@ -75,14 +91,14 @@ function Trends() {
 
                 </div>
                 <div className="line"></div>
-                {isScreenSm &&
+                {isScreenMd &&
                     <Slider {...settings}>
                         {cards.map((card, id) => {
                             return (<CardTrends key={id} card={card}/>)
                         })}
                     </Slider>
                 }
-                {!isScreenSm &&
+                {!isScreenMd &&
                     <div className="trends__cards">
                         {cards.map((card, id) => {
                             return (<CardTrends key={id} card={card}/>)

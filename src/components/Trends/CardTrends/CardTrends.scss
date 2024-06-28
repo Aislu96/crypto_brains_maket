@@ -21,14 +21,27 @@
   &__item {
     @include flexColumn;
     @include gap(10px);
+    align-items: center;
+    img {
+      width: 18px;
+      height: 18px;
+    }
   }
 }
 
 @media screen and (max-width: 700px) {
   .card-trends {
     box-sizing: border-box;
-    width: 240px;
+    border: 0;
+    background-color: $primary-color;
+    border-radius: 6px;
+    margin-right: 13px;
+    padding: 20px;
+    &__item {
+      @include flexRow;
+    }
   }
+
 }
 
 /* /card-trends */
