@@ -108,13 +108,38 @@
 }
 
 
-[type=checkbox], [type=radio] {
-  background-color: transparent !important;
-  box-sizing: border-box;
-  padding: 0;
+.auth__checkbox input[type="checkbox"] {
+  position: relative;
   width: 14px;
   height: 14px;
+  appearance: none;
+  border: 1px solid $colorGreyTwo;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  border-radius: 1px;
 }
+
+.auth__checkbox input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 3px;
+  width: 5px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background-color: transparent;
+}
+
+.auth__checkbox input[type="checkbox"]:checked::before {
+  opacity: 1;
+  background-color: transparent;
+}
+
 
 .password-input-container {
   @include flexRow;

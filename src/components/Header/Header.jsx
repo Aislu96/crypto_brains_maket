@@ -35,7 +35,7 @@ function Header({classAuth}) {
                     </nav>
                     <ul className="user-actions group">
                         <li className="user-actions__item">
-                            <a href="#" className="button button_link">Log In</a>
+                            <Link to="/login" className="button button_link">Log In</Link>
                         </li>
                         <li className="user-actions__item">
                             <Link to="/signUp" className="button button_link-two">Sign Up</Link>
