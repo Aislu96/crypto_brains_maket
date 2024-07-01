@@ -3,6 +3,16 @@
 .footer {
   &__container {
     padding-bottom: 30px;
+
+    &_auth {
+      padding-top: 0 !important;
+      color: $colorGreyTwo;
+
+      span {
+        padding-left: 5.41%;
+        color: $colorGreyTwo;
+      }
+    }
   }
 
   &__list {
@@ -10,6 +20,7 @@
       width: 28px;
       height: 28px;
       fill: $colorWhite;
+
       &:hover {
         cursor: pointer;
         fill: $colorBlue;
@@ -91,10 +102,12 @@
   &__block {
     @include flexColumn;
     @include gap(20px);
+
     & p:hover {
-        cursor: pointer;
-        opacity: 0.5;
+      cursor: pointer;
+      opacity: 0.5;
     }
+
     &-item:hover {
       cursor: pointer;
       color: $colorWhite;
@@ -130,6 +143,18 @@
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .footer {
+    &__container {
+      &_auth {
+      @include flexCenter;
+        span {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 950px) {
   .footer {
@@ -147,6 +172,7 @@
       grid-template-columns: repeat(2, minmax(165px, 240px));
       gap: 20px 13px;
     }
+
     &__group {
       margin: 0 auto;
 
@@ -178,6 +204,11 @@
     &__container {
       padding-bottom: 20px;
       gap: 20px;
+
+      &_auth {
+        text-align: center;
+        padding-bottom: 20px !important;
+      }
     }
 
     &__community {
@@ -203,4 +234,5 @@
 
   }
 }
+
 /* /footer */

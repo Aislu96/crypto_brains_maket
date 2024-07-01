@@ -1,7 +1,9 @@
-function Button({text, classButton}) {
+import {Link} from "react-router-dom";
+
+function Button({text, classButton, link}) {
     return (
-        <button className={`button ${classButton}`}>
-            <a href="#">{text}</a>
+        <button className={`button h20 ${classButton}`}>
+            <Link to={link}>{text}</Link>
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                  xmlns="http://www.w3.org/2000/svg">
                 <path fillRule="evenodd" clipRule="evenodd"

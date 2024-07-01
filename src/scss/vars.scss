@@ -10,6 +10,7 @@ $colorGreyTwo: #808A9A;
 $colorGreyFour: #CFD3DA;
 $colorGreyFive: #BFC4CD;
 $colorGreyThree: #FFFFFF1A;
+$colorGreySix: #ECEEF0;
 $colorGreen: #06B470;
 $fontWeightLight: 300;
 $fontWeightRegular: 400;
@@ -76,6 +77,7 @@ $wight: 1545px;
 }
 
 .h20 {
+    color: $colorGrey;
     @include font(18px, 20px, 28px, 32px);
     font-weight: $fontWeightRegular;
 }
@@ -109,6 +111,13 @@ $wight: 1545px;
     font-weight: $fontWeightRegular;
     font-size: 16px;
     line-height: 20px;
+    color: $colorGreyFive;
+}
+
+.p16d {
+    font-weight: $fontWeightSemiBold;
+    font-size: 16px;
+    line-height: 24px;
     color: $colorGreyFive;
 }
 
@@ -152,4 +161,10 @@ $wight: 1545px;
     font-weight: $fontWeightRegular;
     font-size: 58px;
     line-height: 72.91px;
+}
+
+.p36 {
+    font-weight: $fontWeightSemiBold;
+    font-size: 36px;
+    line-height:45.25px;
 }

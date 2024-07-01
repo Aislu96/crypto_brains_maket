@@ -17,6 +17,9 @@
   box-sizing: border-box;
 }
 
+.form {
+  height: 100vh;
+}
 
 .line {
   border: none;
@@ -144,7 +147,7 @@ img {
     background-color: transparent;
   }
 
-  &_group {
+  &_group, &_group-auth {
     @include flexRow;
     @include gap(30px);
     margin-top: 80px;
@@ -176,6 +179,13 @@ img {
     background-color: transparent;
     border: 0;
     color: $colorGrey;
+  }
+  &__password{
+    padding: 0;
+    color: $colorBlue;
+    background-color: transparent;
+    border: none;
+    white-space: nowrap;
   }
 }
 
@@ -331,4 +341,9 @@ img {
 
 .slick-dots li.slick-active button:before {
   opacity: 1;
+}
+
+
+.active {
+  display: none !important;
 }
