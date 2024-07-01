@@ -160,7 +160,7 @@ img {
     }
     &-two:hover {
       cursor: pointer;
-      border: none;
+      border: 1px solid #1B70F1;
       color: $colorWhite;
     }
   }
@@ -267,11 +267,10 @@ img {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 830px) {
   .menu__list_footer {
     display: none;
   }
-
 }
 
 /* /menu */

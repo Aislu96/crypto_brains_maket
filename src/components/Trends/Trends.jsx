@@ -8,7 +8,7 @@ import {useResize} from "../../hooks/useResize";
 import "./Trends.scss";
 
 function Trends() {
-    const {width, isScreenMd} = useResize();
+    const {isScreenMd} = useResize();
     const settings = {
         dots: false,
         infinite: false,

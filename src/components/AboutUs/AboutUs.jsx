@@ -4,10 +4,9 @@ import number from '../../images/aboutUs/number.svg';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {useResize} from "../../hooks/useResize";
 
 function AboutUs() {
-    const {width, isScreenMd} = useResize();
+
     const settings = {
         dots: true,
         infinite: false,

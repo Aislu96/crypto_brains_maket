@@ -44,8 +44,8 @@ function Trade() {
                     </div>
                 </div>
                 <div className="trade__img">
-                    <img className="trade__img-one" src={phone} alt="phone picture"/>
-                    <img className="trade__img-two" src={computer} alt="computer picture"/>
+                    <img className="trade__img-one" src={phone} alt="phone"/>
+                    <img className="trade__img-two" src={computer} alt="computer"/>
                 </div>
             </div>
         </section>

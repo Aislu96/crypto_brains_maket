@@ -178,8 +178,8 @@ function Footer() {
                     <div className="footer__group-two">
                         <span className="p16b">©Copyright 2022 All Rights Are Reserved.</span>
                         <ul>
-                            <li className="p16b">Privacy Policy</li>
-                            <li className="p16b">Terms of Use</li>
+                            <li className="p16b"><a href="#">Privacy Policy</a></li>
+                            <li className="p16b"><a href="#">Terms of Use</a></li>
                         </ul>
                     </div>
                     <ul className="menu__list menu__list_footer">
