@@ -24,7 +24,7 @@ function BannerBlock({title, text, textButtonOne,textButtonTwo, children, img, l
                         </div>
                     </div>
                     <div className="banner__img">
-                        <img src={img} alt="picture laptop"/>
+                        <img src={img} alt="laptop"/>
                     </div>
                 </div>
                 {children}

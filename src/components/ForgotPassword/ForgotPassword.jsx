@@ -41,11 +41,11 @@ const Register = ({onSignup}) => {
                     <span className="auth__text-error p16d">{errors.name}</span>
                 </div>
                 <div className="auth__label">
-                    <label className="p16d" htmlFor="code">Verification Code</label>
+                    <label className="p16d" htmlFor="password">Verification Code</label>
                     <div className="password-input-container auth__input">
                         <input
-                            id="code"
-                            name="code"
+                            id="password"
+                            name="password"
                             className={`p16d ${errors.password ? 'auth__input_error' : ''}`}
                             type="number"
                             placeholder="Type Here"

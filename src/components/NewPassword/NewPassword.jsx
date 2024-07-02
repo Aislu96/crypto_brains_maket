@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import useFormValidation from '../../hooks/useFormValidation';
 import '../Footer/Footer.scss';
 import Auth from "../Auth/Auth";
 import eye from "../../images/eye.svg";
+import eyeTwo from "../../images/eyeTwo.svg";
 
 const NewPassword = ({ onSignup }) => {
+    const [password, setIsPassword] = useState(false);
+    const [confirmPassword, setIsConfirmPassword] = useState(false);
     const { values, errors, handleChange, setValues, resetValidation, isValid } = useFormValidation({});
-
-    const [isChecked, setIsChecked] = useState(false);
 
     React.useEffect(() => {
         resetValidation();
@@ -20,6 +21,12 @@ const NewPassword = ({ onSignup }) => {
             onSignup(values);
         }
     };
+    function clickEye() {
+        setIsPassword(!password);
+    }
+    function clickEyeTwo() {
+        setIsConfirmPassword(!confirmPassword);
+    }
 
     return (
         <Auth
@@ -35,12 +42,12 @@ const NewPassword = ({ onSignup }) => {
             <>
                 <div className="auth__label">
                     <label className="p16d" htmlFor="password">New Password</label>
-                    <div className="password-input-container auth__input">
+                    <div className={`password-input-container auth__input ${errors.password ? 'auth__input_error' : ''}`}>
                         <input
                             id="password"
                             name="password"
-                            className={`p16d ${errors.password ? 'auth__input_error' : ''}`}
-                            type="password"
+                            className="p16d"
+                            type={password ? "text":"password"}
                             placeholder="Type Here"
                             minLength="8"
                             maxLength="40"
@@ -48,18 +55,18 @@ const NewPassword = ({ onSignup }) => {
                             value={values.password || ''}
                             required
                         />
-                        <img src={eye} alt="Show Password" className="show-password-icon"/>
+                        <img src={password? eyeTwo : eye} alt="Show Password" className="show-password-icon" onClick={clickEye}/>
                     </div>
                     <span className="auth__text-error p16d">{errors.password}</span>
                 </div>
                 <div className="auth__label">
                     <label className="p16d" htmlFor="confirmPassword">Confirm New Password</label>
-                    <div className="password-input-container auth__input">
+                    <div className={`password-input-container auth__input ${errors.confirmPassword ? 'auth__input_error' : ''}`}>
                         <input
                             id="confirmPassword"
                             name="confirmPassword"
-                            className={`p16d ${errors.confirmPassword ? 'auth__input_error' : ''}`}
-                            type="password"
+                            className='p16d'
+                            type={confirmPassword ? "text":"password"}
                             placeholder="Type Here"
                             minLength="8"
                             maxLength="40"
@@ -67,7 +74,7 @@ const NewPassword = ({ onSignup }) => {
                             value={values.confirmPassword || ''}
                             required
                         />
-                        <img src={eye} alt="Show Password" className="show-password-icon"/>
+                        <img src={confirmPassword? eyeTwo : eye} alt="Show Password" className="show-password-icon" onClick={clickEyeTwo}/>
                     </div>
                     <span className="auth__text-error p16d">{errors.confirmPassword}</span>
                 </div>

@@ -1,14 +1,15 @@
 import logo from '../../images/header/logo.svg';
 import './Footer.scss';
+import {Link} from "react-router-dom";
 
 function Footer() {
     return (
         <header className="footer">
             <div className="container footer__container container-color container-flex">
                 <div className="footer__inner">
-                    <a href="#" className="logo">
+                    <Link to="/" className="logo">
                         <img src={logo} alt="cripto brains"/>
-                    </a>
+                    </Link>
                     <nav className="footer__community">
                         <p className="h20">Community-</p>
                         <ul className="footer__list">

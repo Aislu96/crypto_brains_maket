@@ -12,10 +12,10 @@ const Auth = ({title, handleSubmit, buttonText, textLinkOne, textLinkTwo, childr
                     <div className="container auth__container">
                         <div className="auth__inner">
                             <h3 className="auth__title p36">{title}</h3>
-                            <form className="auth__form" name={name} onSubmit={handleSubmit}>
+                            <form className="auth__form" name={name} onSubmit={handleSubmit} noValidate>
                                 {children}
                             </form>
-                            <button type="submit" className={`button h20 ${!isValid && 'auth__button_text'}`}>
+                            <button type="submit"  disabled={!isValid} className={`button h20 ${isValid? "" : `auth__button`}`}>
                                 {buttonText}
                             </button>
                             <Link to={"/forgot-password"} className={`p16d ${classPassword}`}>Forgot Password?</Link>

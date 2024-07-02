@@ -4,9 +4,11 @@ import useFormValidation from '../../hooks/useFormValidation';
 import './Auth.scss';
 import '../Footer/Footer.scss';
 import eye from "../../images/eye.svg";
+import eyeTwo from "../../images/eyeTwo.svg";
 import Auth from "../Auth/Auth";
 
 const Register = ({onSignup}) => {
+    const [password, setIsPassword] = useState(false);
     const {values, errors, handleChange, setValues, resetValidation, isValid} = useFormValidation({});
 
     const [isChecked, setIsChecked] = useState(false);
@@ -27,6 +29,10 @@ const Register = ({onSignup}) => {
         setIsChecked(e.target.checked);
     };
 
+
+    function clickEye() {
+        setIsPassword(!password);
+    }
     return (
         <Auth title={"Sign Up"} name={"form-register"} buttonText={'Sign Up'} textLinkOne={'Have an Account?'} textLinkTwo={'Login Here'} isValid={isValid} handleSubmit={handleSubmit} linkTo={"/login"}  classPassword={"auth__password"}>
             <>
@@ -69,14 +75,14 @@ const Register = ({onSignup}) => {
                 <input
                     id="phone"
                     name="phone"
-                    className={`auth__input p16d ${errors.name ? 'auth__input_error' : ''}`}
+                    className={`auth__input p16d ${errors.phone ? 'auth__input_error' : ''}`}
                     type="tel"
                     placeholder="Type Here"
                     onChange={handleChange}
-                    value={values.name || ''}
+                    value={values.phone || ''}
                     required
                 />
-                <span className="auth__text-error p16d">{errors.name}</span>
+                <span className="auth__text-error p16d">{errors.phone}</span>
             </div>
             <div className="auth__label">
                 <label className="p16d" htmlFor="email">Email Address</label>
@@ -95,12 +101,12 @@ const Register = ({onSignup}) => {
             </div>
             <div className="auth__label">
                 <label className="p16d" htmlFor="password">Password</label>
-                <div className="password-input-container auth__input">
+                <div className={`password-input-container auth__input ${errors.password ? 'auth__input_error' : ''}`}>
                     <input
                         id="password"
                         name="password"
-                        className={`p16d ${errors.password ? 'auth__input_error' : ''}`}
-                        type="password"
+                        className="p16d"
+                        type={password ? "text":"password"}
                         placeholder="Type Here"
                         minLength="8"
                         maxLength="40"
@@ -108,7 +114,7 @@ const Register = ({onSignup}) => {
                         value={values.password || ''}
                         required
                     />
-                    <img src={eye} alt="Show Password" className="show-password-icon"/>
+                    <img src={password? eyeTwo : eye} alt="Show Password" className="show-password-icon" onClick={clickEye}/>
                 </div>
                 <span className="auth__text-error p16d">{errors.password}</span>
             </div>

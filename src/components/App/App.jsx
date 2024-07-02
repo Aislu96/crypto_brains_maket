@@ -10,6 +10,7 @@ import fonSign from "../../images/imgSignUp.svg";
 import Login from "../Login/Login";
 import ForgotPassword from "../ForgotPassword/ForgotPassword";
 import NewPassword from "../NewPassword/NewPassword";
+import '../../utils/telephone';
 
 function AuthLayout({ children }) {
     return (
@@ -40,13 +41,13 @@ function App() {
                 <Route path="/forgot-password" element={<AuthLayout><ForgotPassword /></AuthLayout>} />
                 <Route path="/new-password" element={<AuthLayout><NewPassword /></AuthLayout>} />
                 <Route path="/signLogin" element={
-                    <div className='form'>
+                    <>
                         <Header />
                         <BannerBlock img={fonSign} title={"Start Your Journey By Login or Sign Up"}
                                      text={"Please Sign Up or Login to Enter Market Place"} textButtonOne={"Login"}
                                      textButtonTwo={"Sign Up"} linkOne={'/loginIn'} linkTwo={'/signUp'}
                                      classBtn={"button_group-auth"} classLine={'active'} />
-                    </div>
+                    </>
                 } />
             </Routes>
         </div>
