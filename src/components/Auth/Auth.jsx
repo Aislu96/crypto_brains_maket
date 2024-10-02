@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom';
-import fonSign from "../../images/imgSignUp.svg";
+import fonSign from "../../images/imgSignUp.jpg";
 import '../Footer/Footer.scss';
 
 
