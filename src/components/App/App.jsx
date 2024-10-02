@@ -6,7 +6,7 @@ import Footer from "../Footer/Footer";
 import Register from "../Register/Register";
 import FooterAuth from "../FooterAuth/FooterAuth";
 import BannerBlock from "../BannerBlock/BannerBlock";
-import fonSign from "../../images/imgSignUp.svg";
+import fonSign from "../../images/imgSignUp.jpg";
 import Login from "../Login/Login";
 import ForgotPassword from "../ForgotPassword/ForgotPassword";
 import NewPassword from "../NewPassword/NewPassword";
